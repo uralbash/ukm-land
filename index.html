@@ -20,13 +20,18 @@
     <div class="nav-wrapper container">
       <img src="logo.gif" class="hide-on-med-and-down"/>
       <a id="logo-container" href="#" class="brand-logo" style="margin-top: -5px">
-        <div style="font-weight: bold" class="nowrap">
+        <div style="font-weight: bold">
           <font class="blue-text">Урал</font><font
             class="grey-text text-darken-1">Пром</font><font
             class="blue-text text-darken-3">Компрессор
           </font>
         </div>
       </a>
+      <div class="right indigo-text darken-4 hide-on-med-and-down">
+        <div style="font-weight: bold">
+          +7 (343) 206-47-45
+        </div>
+      </div>
       <ul class="right hide-on-med-and-down">
         <li>
         <a href="http://ukm-vostok.ru">ukm-vostok.ru</a>
@@ -53,11 +58,14 @@
             <h5 class="header col s12 light white-text">Данные компрессоры применяются на тепловозах серий ТЭЗ, ТЭ7, ТЭП60, маневровых тепловозах ТЭМ1 и ТЭМ2.</h5>
           </div>
         </div>
-        <div class="row center">
+        <div class="row center" style="width: 100%">
           <div class="col">
             <h2 class="red">от 7200 руб.</h2>
           </div>
-          <div class="col">
+          <div class="col rigth" style="width: 100%">
+            <a class="waves-effect waves-light btn green modal-trigger" href="#modal1">
+              Сделать заявку
+            </a>
           </div>
         </div>
         <br><br>
@@ -147,7 +155,54 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3">
+
+    </div>
+  </div>
+
+  <div id="modal1" class="modal" style="width: 450px; height: 600px">
+    <form action="https://formspree.io/sale@uralcompressor.ru" method="POST">
+      <div class="modal-content">
+        <h4>Отправить заявку</h4>
+        <div class="row">
+          <div class="col">
+            <p>ФИО</p>
+          </div>
+          <div class="col">
+            <input type="text" name="name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>email</p>
+          </div>
+          <div class="col">
+            <input type="email" name="_replyto">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>Телефон</p>
+          </div>
+          <div class="col">
+            <input id="form_phone" type="text" name="phone">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="input-field col">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+              <label for="icon_prefix2">Описание</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row center">
+        <input class="modal-action modal-close green white-text waves-effect waves-green btn-flat"
+        type="submit" value="Отправить">
+      </div>
+    </form>
   </div>
 
   <footer class="page-footer blue darken-3">
@@ -191,6 +246,11 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.modal-trigger').leanModal();
+    });
+  </script>
 
   </body>
 </html>
